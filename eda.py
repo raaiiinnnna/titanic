@@ -2,24 +2,18 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-# from sklearn.preprocessing import MinMaxScaler
-
-# import plotly.express as px
 
 
-
-# def load_data(data):
-#     return pd.read_csv(data)
 
 st.cache
 def load_data(csv):
     data = pd.read_csv(csv)
     return data
 
-def normalize(data):
-	scaler = MinMaxScaler()
-	ndf = pd.DataFrame(scaler.fit_transform(data), columns=data.columns)
-	return ndf
+# def normalize(data):
+# 	scaler = MinMaxScaler()
+# 	ndf = pd.DataFrame(scaler.fit_transform(data), columns=data.columns)
+# 	return ndf
 
 
 def run_eda_app():
